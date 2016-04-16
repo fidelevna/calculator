@@ -11,12 +11,3 @@ var calculator = {
   }
 };
 calculator.start();
-// var digits = document.getElementsByClassName('digit');
-// var screen = document.getElementById('screen');
-//
-// for(var i = 0; i < digits.length; i++) {
-//    digits[i].onclick = function(event) {
-//      var chislo = event.target.innerHTML;
-//      screen.value = screen.value+chislo;
-//    }
-//  }
