@@ -6,18 +6,16 @@ body {
   margin: 50px auto;
   border: 1px solid grey;
 }
-.calculator input[type="number"] {
+.calculator .screen {
   width: 100%;
   box-sizing: border-box;
   font-size : 40px;
-  padding: 15px 10px;
+  padding: 0px 20px;
+  height: 60px;
   border: none;
   outline: none;
-  direction: rtl;
-}
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+  text-align: right;
+  line-height: 60px;
 }
 
 .calculator .row {
