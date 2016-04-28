@@ -5,6 +5,9 @@ var calculator = {
   dot: document.getElementById('dot'),
   plus: document.getElementById('plus'),
   equal: document.getElementById('equal'),
+  minus: document.getElementById('minus'),
+  multi: document.getElementById('multi'),
+  divide: document.getElementById('divide'),
 
   dotClicked: false,
   shouldClearScreen: false,
@@ -12,7 +15,17 @@ var calculator = {
   addition: function(argument1, argument2) {
     return argument1+argument2;
   },
+  subtraction: function(argument1, argument2) {
+    return argument1-argument2;
+  },
+  multiply: function(argument1, argument2) {
+    return argument1*argument2;
+  },
+  divided: function(argument1, argument2) {
+    return argument1/argument2;
+  },
   start: function() {
+    console.log(calculator.multiply);
     for(var i = 0; i < calculator.digits.length; i++) {
        calculator.digits[i].onclick = function(event) {
          var chislo = event.target.innerHTML;
@@ -51,6 +64,25 @@ var calculator = {
        var result = calculator[calculator.operation](calculator.argument1, calculator.argument2);
        calculator.screen.innerHTML = result;
        calculator.dotClicked = false;
+     }
+     calculator.minus.onclick = function(){
+       calculator.argument1 = parseFloat(calculator.screen.innerHTML);
+       calculator.shouldClearScreen = true;
+       calculator.operation = "subtraction";
+       calculator.dotClicked = false;
+     }
+     calculator.multi.onclick = function(){
+       console.log("Olya");
+       calculator.argument1 = parseFloat(calculator.screen.innerHTML);
+       calculator.shouldClearScreen = true;
+       calculator.operation = "multiply";
+       calculator.dotClicked = false;
+     }
+     calculator.divide.onclick = function(){
+       calculator.argument1 = parseFloat(calculator.screen.innerHTML);
+       calculator.shouldClearScreen = true;
+       calculator.operation = "divided";
+       calculator.ditClicked = false;
      }
    }
 };
